@@ -1,7 +1,7 @@
 <?php
 
 // Connect to DB: Since all files depend on this, this will be included in our header, which is then included in all files.
-$con = mysqli_connect("localhost", "bhanson11", "VORqEhuQDllQzYO", "bhanson11_dmit2025");
+$con = mysqli_connect("localhost", "username", "password", "db_name");
 
 // Check connection
 if (mysqli_connect_errno()) {

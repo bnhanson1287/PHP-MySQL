@@ -1,0 +1,32 @@
+/* Here we can add anything we want to suit our project. */
+
+.jumbotron{
+	padding: 30px;
+}
+
+.container{
+	padding-top:100px; /* A quick hack to stop stuff from disappearing below fixed navbar: Change this if it's not suitable for your project. */
+}
+textarea{
+	height:140px;
+}
+
+.form-group.required .control-label:before 
+{
+  content:"*";
+  color:red;
+  padding-right: 5px;
+}
+.description-textarea
+{
+	width:300px;
+
+}
+.active
+{
+	font-weight: bold;
+}
+.login-form
+{
+	max-width: 460px;
+}

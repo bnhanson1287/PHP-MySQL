@@ -34,7 +34,7 @@ include("mysql_connect.php");// here we include the connection script; since thi
  <!--  Note how we can use BASE_URL constant to resolve all links no matter where the file resides. -->
 <link href="<?php echo BASE_URL ?>css/styles.css" rel="stylesheet">
 <!-- Themes from https://bootswatch.com/ : Use the Themes dropdown to select a theme you like; copy/paste the bootstrap.css. Here, we have named the downloaded theme as a new file and can overwrite the default.  -->
-<link href="<?php echo BASE_URL ?>css/bootstrap-superhero.css" rel="stylesheet">
+<link href="<?php echo BASE_URL ?>css/bootstrap-cerulean.css" rel="stylesheet">
 
 
 
@@ -51,6 +51,13 @@ function emoticon(text) {
     txtarea.focus();
   }
 }
+  function go()
+    {
+       box = document.forms[0].entryselect;
+       destination = box.options[box.selectedIndex].value;
+       if (destination) location.href = destination;
+    }
+
 </script>
 
 
@@ -67,19 +74,12 @@ function emoticon(text) {
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-         
-          <li class="nav-item active">
-            <!-- This is a placeholder link. You will need to change this to link to your files. -->
-            <a class="nav-link" href="<?php echo BASE_URL ?>#">Link</a>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
               <a class="dropdown-item" href="<?php echo BASE_URL ?>admin/insert.php">Insert</a>
+              <a class="dropdown-item" href="<?php echo BASE_URL ?>admin/edit.php">Edit</a>
               <!-- <a class="dropdown-item" href="<?php echo BASE_URL ?>#">Link</a> -->
-              
-
-
             </div>
           </li>
         </ul>
@@ -89,6 +89,7 @@ function emoticon(text) {
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form> -->
+        <a href="<?php echo BASE_URL ?>admin/logout.php" class="btn btn-danger"><i class="glyphicon glyphicon-log-out"></i>Logout</a>
       </div>
     </nav>
 

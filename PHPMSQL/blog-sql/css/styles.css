@@ -13,3 +13,20 @@ textarea{
 form{
 	max-width:400px; /* A quick hack to stop forms from being waaaayyy tooo wide. Remove if you don't like. */
 }
+.blog-entry
+{
+	border:1px solid #ededed;
+	padding: 10px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+.blog-entry h3
+{
+	display: inline;
+}
+.blog-date
+{
+	font-style: italic;
+	height: 50px;
+	float:right;
+}

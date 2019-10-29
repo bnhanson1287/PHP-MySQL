@@ -1,4 +1,14 @@
 <?php
+
+	session_start();
+	if(isset($_SESSION['labsixsessionforlogin']))
+	{
+		 
+	}
+	else 
+	{
+		header("Location:login.php?redirect=insert.php"); 
+	}
 	include("../includes/header.php");
 	/*
 		Grab Form Values if Button is clicked validate.
@@ -72,9 +82,6 @@
 			<label for="submit">&nbsp;</label>
 			<input type="submit" name="submit" class="btn btn-info" value="Submit">
 		</div>
-
-
-
 </form>
 <?php
 	include("../includes/footer.php");
